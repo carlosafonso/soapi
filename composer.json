@@ -1,0 +1,25 @@
+{
+    "name": "carlosafonso/soapi",
+    "description": "Enhanced PHP SOAP library",
+    "type": "library",
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.2",
+        "symfony/var-dumper": "^3.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carlos Afonso Pérez",
+            "email": "carlos.afonso.perez@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Afonso\\Soapi\\": "src/",
+            "Afonso\\Soapi\\Tests\\": "tests/"
+        }
+    }
+}
