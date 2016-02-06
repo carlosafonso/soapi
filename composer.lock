@@ -4,9 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "40da5562ab03daed83f6dfa6681359a0",
-    "content-hash": "fffe4cdc199e101ac94c6f573772b5a6",
-    "packages": [],
+    "hash": "5566cec5fd4132f889e3addee090725f",
+    "content-hash": "99e6eb37e0a9d6d639a35eb3fb948ad7",
+    "packages": [
+        {
+            "name": "league/pipeline",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/pipeline.git",
+                "reference": "c6968e4adaf8ada7cfbfb3ca64a695e695a021e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/pipeline/zipball/c6968e4adaf8ada7cfbfb3ca64a695e695a021e3",
+                "reference": "c6968e4adaf8ada7cfbfb3ca64a695e695a021e3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "henrikbjorn/phpspec-code-coverage": "^1.0",
+                "phpspec/phpspec": "^2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\Pipeline\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "A plug and play pipeline implementation.",
+            "keywords": [
+                "composition",
+                "design pattern",
+                "pattern",
+                "pipeline",
+                "sequential"
+            ],
+            "time": "2015-12-06 21:51:05"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
