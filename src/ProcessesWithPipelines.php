@@ -20,7 +20,6 @@ trait ProcessesWithPipelines
 	 */
 	protected $outboundPipeline;
 
-
 	/**
 	 * Adds a new stage to the inbound pipeline.
 	 *

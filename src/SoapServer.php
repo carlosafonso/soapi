@@ -11,7 +11,6 @@ use SoapServer as NativeSoapServer;
  * This server includes input and output
  * pipelines to aribtrarily modify requests
  * and responses.
- *
  */
 class SoapServer extends NativeSoapServer
 {
@@ -52,6 +51,7 @@ class SoapServer extends NativeSoapServer
 	 * passed as an argument. Likewise, it will return
 	 * nothing and output the response instead.
 	 *
+	 * @see		http://php.net/manual/en/soapserver.handle.php
 	 * @param	string|null	$soapRequest
 	 */
 	public function handle($soapRequest = null)
@@ -74,7 +74,7 @@ class SoapServer extends NativeSoapServer
 		$soapResponse = ob_get_clean();
 
 		/*
-		 * The run the response through the outbound
+		 * Then run the response through the outbound
 		 * pipeline
 		 */
 		$soapResponse = $this->outboundPipeline->process($soapResponse);
