@@ -22,9 +22,8 @@ class SoapClient extends NativeSoapClient
      *
      * @param   string|null $wsdl
      * @param   array       $options
-     * @return  SoapClient
      */
-    public function __construct($wsdl, array $options = array()/*, $autoresponse = true*/)
+    public function __construct($wsdl, array $options = array())
     {
         parent::__construct($wsdl, $options);
 

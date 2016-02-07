@@ -16,20 +16,16 @@ class SoapServer extends NativeSoapServer
 {
     use ProcessesWithPipelines;
 
-    // protected $autoresponse = true;
-
     /**
      * Creates and returns a new SoapServer
      * with empty inbound and outbound pipelines.
      *
      * @param   string|null $wsdl
      * @param   array       $options
-     * @return  SoapServer
      */
-    public function __construct($wsdl, array $options = array()/*, $autoresponse = true*/)
+    public function __construct($wsdl, array $options = array())
     {
         parent::__construct($wsdl, $options);
-        // $this->autoresponse = $autoresponse;
 
         // initialize in and outbound pipelines
         $this->inboundPipeline = new Pipeline();
