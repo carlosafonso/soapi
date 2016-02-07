@@ -16,7 +16,9 @@
         "league/pipeline": "^0.2.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.2",
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3",
         "symfony/var-dumper": "^3.0"
     },
     "autoload": {
