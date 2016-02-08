@@ -7,7 +7,9 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Enhanced PHP SOAP library
+An enhanced, drop-in replacement of PHP's SOAP library.
+
+PHP's native SOAP library will do the trick most of the time, but it falls somewhat short when you need to do complex stuff with your SOAP flow, such as implementing WSSE or doing some logging. This library is a drop-in replacement that allows defining custom pipelines for manipulating and working with requests and responses. Additional improvements, such as better error handling, are on the works.
 
 ## Install
 
