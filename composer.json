@@ -1,7 +1,7 @@
 {
     "name": "carlosafonso/soapi",
     "type": "library",
-    "description": "Enhanced PHP SOAP library",
+    "description": "An enhanced, drop-in replacement for  PHP's native SOAP library",
     "keywords": ["soap"],
     "homepage": "https://github.com/carlosafonso/soapi",
     "license": "MIT",
