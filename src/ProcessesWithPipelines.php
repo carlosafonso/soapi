@@ -1,4 +1,5 @@
 <?php
+
 namespace Afonso\Soapi;
 
 use League\Pipeline\Pipeline;

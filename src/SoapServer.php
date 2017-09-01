@@ -1,24 +1,23 @@
 <?php
+
 namespace Afonso\Soapi;
 
 use League\Pipeline\Pipeline;
 use SoapServer as NativeSoapServer;
 
 /**
- * A enhanced, drop-in replacement for PHP's
- * native SoapServer class.
+ * A enhanced, drop-in replacement for PHP's native SoapServer class.
  *
- * This server includes input and output
- * pipelines to aribtrarily modify requests
- * and responses.
+ * This server includes input and output pipelines to aribtrarily modify
+ * requests and responses.
  */
 class SoapServer extends NativeSoapServer
 {
     use ProcessesWithPipelines;
 
     /**
-     * Creates and returns a new SoapServer
-     * with empty inbound and outbound pipelines.
+     * Creates and returns a new SoapServer with empty inbound and outbound
+     * pipelines.
      *
      * @param   string|null $wsdl
      * @param   array       $options
@@ -35,16 +34,13 @@ class SoapServer extends NativeSoapServer
     /**
      * Handles a SOAP request.
      *
-     * This function delegates on PHP's native
-     * SoapServer handle(), but processes the input
-     * XML through the inbound and outbound pipelines.
-     * This allows for arbitrary manipulation of
-     * requests and responses, such as encryption or
-     * logging.
+     * This function delegates on PHP's native SoapServer handle(), but
+     * processes the input XML through the inbound and outbound pipelines. This
+     * allows for arbitrary manipulation of requests and responses, such as
+     * encryption or logging.
      *
-     * Just as the parent class, this function will
-     * fetch the input from the POST data if none is
-     * passed as an argument. Likewise, it will return
+     * Just as the parent class, this function will fetch the input from the
+     * POST data if none is passed as an argument. Likewise, it will return
      * nothing and output the response instead.
      *
      * @see     http://php.net/manual/en/soapserver.handle.php
@@ -57,26 +53,24 @@ class SoapServer extends NativeSoapServer
         }
 
         /*
-         * Run the request XML through the inbound
-         * pipeline
+         * Run the request XML through the inbound pipeline.
          */
         $soapRequest = $this->inboundPipeline->process($soapRequest);
 
         /*
-         * Execute the request
+         * Execute the request.
          */
         ob_start();
         parent::handle($soapRequest);
         $soapResponse = ob_get_clean();
 
         /*
-         * Then run the response through the outbound
-         * pipeline
+         * Then run the response through the outbound pipeline.
          */
         $soapResponse = $this->outboundPipeline->process($soapResponse);
 
         /*
-         * Output the response and we're done
+         * Output the response and we're done.
          */
         $this->outputResponse($soapResponse);
     }
